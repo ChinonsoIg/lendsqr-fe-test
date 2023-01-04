@@ -20,6 +20,7 @@ const Login = () => {
         <form className="login_form">
           <div className="inputs_box">
             <input type="email" placeholder="Email" />
+            {/* TODO: Add show/hide button  */}
             {/* <div> */}
               <input type="password" placeholder="Password"></input>
               {/* <span>show</span>
