@@ -1,0 +1,350 @@
+@import "index";
+
+.login {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 100vh;
+  // border: 2px solid red;
+}
+
+.login-image-box {
+  // border: 2px solid red;
+  display: flex;
+  flex-direction: column;
+  // max-width: 669px;
+  padding-top: 107px;
+  gap: 139px;
+
+  .logo_login {
+    width: 100%;
+    max-width: 174px;
+    height: auto;
+    padding-left: 30px;
+  }
+
+  .pablo_sign_in {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+  }
+}
+
+.login-form-box {
+  // border: 2px solid red;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 60px;
+  padding-top: 220px;
+  padding-left: 10px;
+  // padding-left: 100px;
+
+  .title_box {
+    display: flex;
+    flex-direction: column;
+    // border: 2px solid red;
+
+    .login_title {
+      color: $primary-color;
+      font-size: 40px;
+      font-weight: 700;
+      line-height: 54px;
+      align-self: flex-start;
+    }
+
+    .login_subtitle {
+      color: #545F7D;
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 27px;
+      align-self: flex-start;
+    }
+  }
+
+  .login_form {
+    width: 100%;
+    max-width: 450px;
+    
+    // border: 2px solid red;
+
+    .inputs_box {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      // border: 2px solid red;
+
+      input {
+        // width: 100%;
+        height: 50px;
+        border-radius: 5px;
+        font-size: 16px;
+        border: 2px solid rgba(84, 95, 125, 0.15);
+      }
+
+      p {
+        align-self: flex-start;
+        padding: 0;
+        margin: 0;
+        color: $primary-color;
+        font-size: 12px;
+        letter-spacing: 10%;
+        font-weight: 600;
+        line-height: 16px;
+        text-transform: uppercase;
+        // border: 1px solid red;
+      }
+    }
+
+    .login_btn {
+      height: 48px;
+      width: 100%;
+      margin-top: 30px;
+      background: $primary-color;
+      color: #FFFFFF;
+      font-size: 14px;
+      letter-spacing: 10%;
+      font-weight: 600;
+      line-height: 19px;
+      border-radius: 8px;
+      text-transform: uppercase;
+      border: none;
+    }
+  }
+}
+
+
+@media (max-width: 1200px) {
+  .login {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 100vh;
+    padding: 0 20px;
+  }
+  
+  .login-image-box {
+    // border: 2px solid red;
+    display: flex;
+    flex-direction: column;
+    // max-width: 669px;
+    padding-top: 60px;
+    gap: 50px;
+  
+    .logo_login {
+      align-self: flex-start;
+      width: 100%;
+      max-width: 174px;
+      height: auto;
+      // padding-left: 30px;
+      // border: 2px solid red;
+    }
+  
+    .pablo_sign_in {
+      width: 100%;
+      max-width: 600px;
+      height: auto;
+    }
+  }
+  
+  .login-form-box {
+    // border: 2px solid red;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 60px;
+    padding-top: 100px;
+    padding-left: 50px;
+    // padding-left: 100px;
+  
+    .title_box {
+      display: flex;
+      flex-direction: column;
+      // border: 2px solid red;
+  
+      .login_title {
+        color: $primary-color;
+        font-size: 40px;
+        font-weight: 700;
+        line-height: 54px;
+        align-self: flex-start;
+      }
+  
+      .login_subtitle {
+        color: #545F7D;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 27px;
+        align-self: flex-start;
+      }
+    }
+  
+    .login_form {
+      width: 100%;
+      max-width: 450px;
+      // border: 2px solid red;
+  
+      .inputs_box {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        // border: 2px solid red;
+  
+        input {
+          // width: 100%;
+          height: 50px;
+          border-radius: 5px;
+          font-size: 16px;
+          border: 2px solid rgba(84, 95, 125, 0.15);
+        }
+
+        p {
+          align-self: flex-start;
+          padding: 0;
+          margin: 0;
+          color: $primary-color;
+          font-size: 12px;
+          letter-spacing: 10%;
+          font-weight: 600;
+          line-height: 16px;
+          text-transform: uppercase;
+          // border: 1px solid red;
+        }
+      }
+  
+      .login_btn {
+        height: 48px;
+        width: 100%;
+        margin-top: 30px;
+        background: $primary-color;
+        color: #FFFFFF;
+        font-size: 14px;
+        letter-spacing: 10%;
+        font-weight: 600;
+        line-height: 19px;
+        border-radius: 8px;
+        text-transform: uppercase;
+        border: none;
+      }
+    }
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (max-width: 768px) {
+  .login {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    height: 100vh;
+    padding: 10px;
+  }
+  
+  .login-image-box {
+    border: 2px solid red;
+    display: flex;
+    flex-direction: column;
+    // max-width: 669px;
+    padding-top: 10px;
+    gap: 50px;
+  
+    .logo_login {
+      align-self: flex-start;
+      width: 100%;
+      max-width: 174px;
+      height: auto;
+      // padding-left: 30px;
+      border: 2px solid red;
+    }
+  
+    .pablo_sign_in {
+      width: 100%;
+      max-width: 600px;
+      height: auto;
+    }
+  }
+  
+  .login-form-box {
+    border: 2px solid red;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 60px;
+    padding-top: 220px;
+    padding-left: 10px;
+    // padding-left: 100px;
+  
+    .title_box {
+      display: flex;
+      flex-direction: column;
+      border: 2px solid red;
+  
+      .login_title {
+        color: $primary-color;
+        font-size: 40px;
+        font-weight: 700;
+        line-height: 54px;
+        align-self: flex-start;
+      }
+  
+      .login_subtitle {
+        color: #545F7D;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 27px;
+        align-self: flex-start;
+      }
+    }
+  
+    .login_form {
+      width: 100%;
+      max-width: 450px;
+      
+      // border: 2px solid red;
+  
+      .inputs_box {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        // border: 2px solid red;
+  
+        input {
+          // width: 100%;
+          height: 50px;
+          border-radius: 5px;
+          font-size: 16px;
+          border: 2px solid rgba(84, 95, 125, 0.15);
+        }
+  
+        p {
+          align-self: flex-start;
+          padding: 0;
+          margin: 0;
+          color: $primary-color;
+          font-size: 12px;
+          letter-spacing: 10%;
+          font-weight: 600;
+          line-height: 16px;
+          text-transform: uppercase;
+          // border: 1px solid red;
+        }
+      }
+  
+      .login_btn {
+        height: 48px;
+        width: 100%;
+        margin-top: 30px;
+        background: $primary-color;
+        color: #FFFFFF;
+        font-size: 14px;
+        letter-spacing: 10%;
+        font-weight: 600;
+        line-height: 19px;
+        border-radius: 8px;
+        text-transform: uppercase;
+        border: none;
+      }
+    }
+  }
+}
