@@ -14,13 +14,16 @@ const Login = () => {
       </div>
       <div className="login-form-box">
         <div className="title_box">
-        <header className="login_title">Welcome!</header>
-        <p className="login_subtitle">Enter details to login</p>
+          <header className="login_title">Welcome!</header>
+          <p className="login_subtitle">Enter details to login</p>
         </div>
         <form className="login_form">
           <div className="inputs_box">
-            <input />
-            <input />
+            <input type="email" placeholder="Email" />
+            {/* <div> */}
+              <input type="password" placeholder="Password"></input>
+              {/* <span>show</span>
+            </div> */}
             <p>Forgot password?</p>
           </div>
           <input type="submit" value="Log in" className="login_btn" />
