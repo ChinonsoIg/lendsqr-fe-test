@@ -6,6 +6,17 @@ import logo_login from "../../assets/images/logo_login.png";
 import pablo_sign_in from "../../assets/images/pablo_sign_in.png";
 
 const Login = () => {
+
+  const [show, setShow] = React.useState(false);
+
+  const handleShow = () => {
+    setShow(!show)
+  }
+
+  const handleLogin = (e: { preventDefault: () => void; }) => {
+    e.preventDefault();
+  }
+
   return (
     <div className="login">
       <div className="login-image-box">
@@ -17,14 +28,13 @@ const Login = () => {
           <header className="login_title">Welcome!</header>
           <p className="login_subtitle">Enter details to login</p>
         </div>
-        <form className="login_form">
+        <form className="login_form" onSubmit={handleLogin}>
           <div className="inputs_box">
-            <input type="email" placeholder="Email" />
-            {/* TODO: Add show/hide button  */}
-            {/* <div> */}
-              <input type="password" placeholder="Password"></input>
-              {/* <span>show</span>
-            </div> */}
+            <input type="email" placeholder="Email" className="input_shared" />
+            <div className="password_container">
+              <input type={show ? "text" : "password"} placeholder="Password"></input>
+              <span onClick={handleShow}>{show ? "hide" : "show"}</span>
+            </div>
             <p>Forgot password?</p>
           </div>
           <input type="submit" value="Log in" className="login_btn" />
