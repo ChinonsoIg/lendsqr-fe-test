@@ -39,7 +39,6 @@
     .title_box {
       display: flex;
       flex-direction: column;
-      // border: 2px solid red;
 
       .login_title {
         color: $primary-color;
@@ -105,7 +104,6 @@
           line-height: 16px;
           text-transform: uppercase;
           text-decoration: none;
-          // border: 1px solid red;
         }
       }
 
@@ -174,7 +172,6 @@
 
       .logo_login {
         max-width: 140px;
-        // border: 2px solid red;
       }
 
       .login-form-box {
@@ -195,18 +192,15 @@
     grid-gap: 20px;
     height: 100vh;
     padding: 15px;
-    // border: 2px solid green;
 
     .login-image-box {
       padding-top: 0px;
       height: fit-content;
-      // border: 2px solid red;
 
       .logo_login {
         align-self: flex-start;
         padding: 0px;
         max-width: 120px;
-        // border: 2px solid red;
       }
 
       .pablo_sign_in {
@@ -215,7 +209,6 @@
     }
 
     .login-form-box {
-      // border: 2px solid red;
       display: flex;
       flex-direction: column;
       align-items: flex-start;
@@ -225,7 +218,6 @@
       .title_box {
         display: flex;
         flex-direction: column;
-        // border: 2px solid red;
 
         .login_title {
           color: $primary-color;
@@ -248,17 +240,13 @@
         width: 100%;
         max-width: 450px;
 
-        // border: 2px solid red;
-
         .inputs_box {
           width: 100%;
           display: flex;
           flex-direction: column;
           gap: 24px;
-          // border: 2px solid red;
 
           input {
-            // width: 100%;
             height: 50px;
             border-radius: 5px;
             font-size: 16px;
@@ -276,7 +264,6 @@
             line-height: 16px;
             text-transform: uppercase;
             text-decoration: none;
-            // border: 1px solid red;
           }
         }
 
