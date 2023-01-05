@@ -94,7 +94,7 @@
           }
         }
 
-        p {
+        a {
           align-self: flex-start;
           padding: 0;
           margin: 0;
@@ -104,6 +104,7 @@
           font-weight: 600;
           line-height: 16px;
           text-transform: uppercase;
+          text-decoration: none;
           // border: 1px solid red;
         }
       }
@@ -127,6 +128,8 @@
 
 }
 
+
+// Large devices (1200px and down)
 @media (max-width: 1200px) {
   .login {
     display: grid;
@@ -163,67 +166,80 @@
   }
 }
 
-// Medium devices (tablets, 768px and up)
+
+// Medium devices (tablets, 768px and down)
 @media (max-width: 768px) {
+  .login {
+    .login-image-box {
+
+      .logo_login {
+        max-width: 140px;
+        // border: 2px solid red;
+      }
+
+      .login-form-box {
+        padding-top: 130px;
+        gap: 40px;
+      }
+    }
+  }
+}
+
+
+// Small devices (phones, 576px and down)
+@media (max-width: 576px) {
   .login {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: auto auto;
+    grid-gap: 20px;
     height: 100vh;
-    padding: 10px;
+    padding: 15px;
+    // border: 2px solid green;
 
     .login-image-box {
-      border: 2px solid red;
-      display: flex;
-      flex-direction: column;
-      // max-width: 669px;
-      padding-top: 10px;
-      gap: 50px;
+      padding-top: 0px;
+      height: fit-content;
+      // border: 2px solid red;
 
       .logo_login {
         align-self: flex-start;
-        width: 100%;
-        max-width: 174px;
-        height: auto;
-        // padding-left: 30px;
-        border: 2px solid red;
+        padding: 0px;
+        max-width: 120px;
+        // border: 2px solid red;
       }
 
       .pablo_sign_in {
-        width: 100%;
-        max-width: 600px;
-        height: auto;
+        display: none;
       }
     }
 
     .login-form-box {
-      border: 2px solid red;
+      // border: 2px solid red;
       display: flex;
       flex-direction: column;
       align-items: flex-start;
       gap: 60px;
-      padding-top: 220px;
-      padding-left: 10px;
-      // padding-left: 100px;
+      padding: 0px;
 
       .title_box {
         display: flex;
         flex-direction: column;
-        border: 2px solid red;
+        // border: 2px solid red;
 
         .login_title {
           color: $primary-color;
-          font-size: 40px;
+          font-size: 30px;
           font-weight: 700;
-          line-height: 54px;
+          line-height: 44px;
           align-self: flex-start;
         }
 
         .login_subtitle {
           color: #545F7D;
-          font-size: 20px;
+          font-size: 16px;
           font-weight: 400;
-          line-height: 27px;
+          line-height: 21px;
           align-self: flex-start;
         }
       }
@@ -249,7 +265,7 @@
             border: 2px solid rgba(84, 95, 125, 0.15);
           }
 
-          p {
+          a {
             align-self: flex-start;
             padding: 0;
             margin: 0;
@@ -259,6 +275,7 @@
             font-weight: 600;
             line-height: 16px;
             text-transform: uppercase;
+            text-decoration: none;
             // border: 1px solid red;
           }
         }

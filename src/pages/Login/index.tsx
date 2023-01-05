@@ -35,7 +35,7 @@ const Login = () => {
               <input type={show ? "text" : "password"} placeholder="Password"></input>
               <span onClick={handleShow}>{show ? "hide" : "show"}</span>
             </div>
-            <p>Forgot password?</p>
+          <a href="#/reset_password">Forgot password?</a>
           </div>
           <input type="submit" value="Log in" className="login_btn" />
         </form>
