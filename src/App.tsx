@@ -13,13 +13,13 @@ function App() {
       {/* <Login /> */}
       <BrowserRouter>
       <Routes>
-        <Route path='/' element={<SharedLayout />}>
+        <Route path='/' element={<Dashboard />}>
           <Route index element={<div>Hello world!</div>} />
 
-          <Route path='users' element={<div>Hello world users!</div>}>
+          {/* <Route path='users' element={<div>Hello world users!</div>}> */}
             {/* <Route index element={<Dashboard />} /> */}
-            <Route path=':userId' element={<div>Hello world! user id</div>} />
-          </Route>
+            {/* <Route path=':userId' element={<div>Hello world! user id</div>} /> */}
+          {/* </Route> */}
 
           <Route path='*' element={<div>Error!</div>} />
         </Route>
