@@ -2,7 +2,7 @@ import React from 'react'
 import SharedLayout from '../../components/layout/SharedLayout';
 import { gridItems } from '../../utils/GridItems';
 import three_dots from "../../assets/icons/three_dots.svg";
-import "../../assets/styles/Dashboard.scss"
+import "../../assets/styles/Users.scss"
 import { addComma } from '../../utils/functions';
 
 

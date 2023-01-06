@@ -5,7 +5,8 @@ import React from 'react';
 import './assets/styles/index.scss';
 import Login from './pages/Login';
 import SharedLayout from './components/layout/SharedLayout';
-import Dashboard from './pages/Dashboard';
+import Users from './pages/Users';
+import SingleUser from './pages/SingleUser';
 
 function App() {
   return (
@@ -13,7 +14,7 @@ function App() {
       {/* <Login /> */}
       <BrowserRouter>
       <Routes>
-        <Route path='/' element={<Dashboard />}>
+        <Route path='/' element={<SingleUser />}>
           <Route index element={<div>Hello world!</div>} />
 
           {/* <Route path='users' element={<div>Hello world users!</div>}> */}
