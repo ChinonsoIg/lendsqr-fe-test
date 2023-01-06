@@ -35,7 +35,7 @@ const Sidebar: React.FC<SidebarProps> = ({ closeSidebar }) => {
                 <p className="nav_heading">{navItem.heading}</p>
                 <div>
                   {navItem.items.map((item) => (
-                    <div className="nav_item" key={item.id}>
+                    <div className={`nav_item ${item.title === "users" ? "active_link" : null}`} key={item.id}>
                       <p>{item.icon}</p>
                       <p>{item.title}</p>
                     </div>

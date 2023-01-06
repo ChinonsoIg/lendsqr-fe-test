@@ -34,6 +34,7 @@
 .table_container {
   margin: 40px 0;
   color: #545F7D;
+  overflow-x: scroll;
   // border: 1px solid red;
 
   table {
@@ -92,11 +93,6 @@
         border: none;
         padding: 0 10px;
         margin: 0 5px;
-
-    //     -moz-appearance:none;
-    // -webkit-appearance:none; 
-    // appearance:none;
-
       }
     }
   }
@@ -114,15 +110,20 @@
 
 // Medium devices (tablets, 768px and down)
 @media (max-width: 768px) {
-  
+  // No content yet
 }
-
 
 // Small devices (phones, 576px and down)
 @media (max-width: 576px) {
   .grid_container {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
+  }
+
+  .data_modifier {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
   }
 
 }

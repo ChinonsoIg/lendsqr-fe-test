@@ -3,6 +3,7 @@ import SharedLayout from '../../components/layout/SharedLayout';
 import { gridItems } from '../../utils/GridItems';
 import three_dots from "../../assets/icons/three_dots.svg";
 import "../../assets/styles/Dashboard.scss"
+import { addComma } from '../../utils/functions';
 
 
 const Dashboard = () => {
@@ -24,52 +25,56 @@ const Dashboard = () => {
           <div className="grid_item" key={gridItem.id}>
             <p>{gridItem.icon}</p>
             <p className="grid_item_title">{gridItem.title}</p>
-            <p className="grid_item_figure">{gridItem.figure}</p>
+            <p className="grid_item_figure">{addComma(gridItem.figure)}</p>
           </div>
         ))}
       </div>
       <div className="table_container">
         <table>
-          <tr>
-            <th>organisation</th>
-            <th>username</th>
-            <th>email</th>
-            <th>phone number</th>
-            <th>date joined</th>
-            <th>status</th>
-            <th></th>
-          </tr>
-          <tr>
-            <td>gbas</td>
-            <td>gbas</td>
-            <td>gbas</td>
-            <td>gbas</td>
-            <td>gbas</td>
-            <td>gbas</td>
-            <td><img src={three_dots} alt="dots" /></td>
-          </tr>
-          <tr>
-            <td>gbas</td>
-            <td>gbas</td>
-            <td>gbas</td>
-            <td>gbas</td>
-            <td>gbas</td>
-            <td>gbas</td>
-            <td><img src={three_dots} alt="dots" /></td>
-          </tr>
-          <tr>
-            <td>gbas</td>
-            <td>gbas</td>
-            <td>gbas</td>
-            <td>gbas</td>
-            <td>gbas</td>
-            <td>gbas</td>
-            <td><img src={three_dots} alt="dots" /></td>
-          </tr>
+          <thead>
+            <tr>
+              <th>organisation</th>
+              <th>username</th>
+              <th>email</th>
+              <th>phone number</th>
+              <th>date joined</th>
+              <th>status</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>gbas ahsk aij aosijoias soijao</td>
+              <td>gbasahjnaoiuaiuyauyhiauuhda</td>
+              <td>gbasahjnaoiuaiuyauyhiauuhda</td>
+              <td>gbasahjnaoiuaiuyauyhiauuhda</td>
+              <td>gbasahjnaoiuaiuyauyhiauuhda</td>
+              <td>gbasahjnaoiuaiuyauyhiauuhda</td>
+              <td><img src={three_dots} alt="dots" /></td>
+            </tr>
+            <tr>
+              <td>gbasahjnaoiuaiuyauyhiauuhda</td>
+              <td>gbasahjnaoiuaiuyauyhiauuhda</td>
+              <td>gbasahjnaoiuaiuyauyhiauuhda</td>
+              <td>gbasahjnaoiuaiuyauyhiauuhda</td>
+              <td>gbasahjnaoiuaiuyauyhiauuhda</td>
+              <td>gbasahjnaoiuaiuyauyhiauuhda</td>
+              <td><img src={three_dots} alt="dots" /></td>
+            </tr>
+            <tr>
+              <td>gbas sdjhiu aiua iadu oiadui a a had ihud</td>
+              <td>gbas sdjhiu aiua iadu oiadui a a had ihud</td>
+              <td>gbas sdjhiu aiua iadu oiadui a a had ihud</td>
+              <td>gbas sdjhiu aiua iadu oiadui a a had ihud</td>
+              <td>gbas sdjhiu aiua iadu oiadui a a had ihud</td>
+              <td>gbas sdjhiu aiua iadu oiadui a a had ihud</td>
+              <td><img src={three_dots} alt="dots" /></td>
+            </tr>
+          </tbody>
         </table>
         <div className="data_modifier">
-          <p className="items_per_page">Showing 
-            <select className="num_value">{allNums.map((num) => <option >{num}</option>)}</select> out of 100
+          <p className="items_per_page">Showing
+            <select className="num_value">{allNums.map((num, ind) => <option key={ind}>{num}</option>)}</select> out of 100
           </p>
           <p>Paginate</p>
         </div>
