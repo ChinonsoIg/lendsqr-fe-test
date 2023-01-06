@@ -1,5 +1,14 @@
 @import "index";
 
+.heading {
+  color: #213F7D;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  margin: 0 0 40px 0;
+  // border: 1px solid red;
+}
+
 .grid_container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;

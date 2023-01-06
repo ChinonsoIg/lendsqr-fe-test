@@ -92,6 +92,7 @@
     margin-left: 283px;
     position: relative;
 
+
     .topbar_container {
       display: grid;
       grid-template-columns: auto auto;
@@ -101,6 +102,8 @@
       background-color: $white;
       box-shadow: 0px 24px 48px 0 rgba(0, 0, 0, 0.04);
       // box-shadow: 0px 20px 3px, 0px rgba(0, 0, 0, 0.04);
+      position: sticky;
+      top: 0;
       // border: 3px solid red;
 
       .sidebar_toggle {
@@ -293,7 +296,6 @@
           display: flex;
           justify-content: flex-end;
           width: 85%;
-          // border: 1px solid red;
         }
 
         .logo {

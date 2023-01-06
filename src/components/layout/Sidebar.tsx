@@ -13,8 +13,8 @@ const Sidebar: React.FC<SidebarProps> = ({ closeSidebar }) => {
   return (
     <>
       <div className="logo_box">
-        <div className="close_btn" onClick={closeSidebar}>
-          &times;
+        <div className="close_btn">
+          <p onClick={closeSidebar}>&times;</p>
         </div>
         <img src={logo} alt="logo" className="logo" />
       </div>
