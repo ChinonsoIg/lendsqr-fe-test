@@ -80,48 +80,6 @@ const Dashboard = () => {
           <p>Paginate</p>
         </div>
 
-        <table>
-          <thead>
-            <tr>
-              <th>organisation</th>
-              <th>username</th>
-              <th>email</th>
-              <th>phone number</th>
-              <th>date joined</th>
-              <th>status</th>
-              <th></th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>gbas ahsk aij aosijoias soijao</td>
-              <td>gbasahjnaoiuaiuyauyhiauuhda</td>
-              <td>gbasahjnaoiuaiuyauyhiauuhda</td>
-              <td>gbasahjnaoiuaiuyauyhiauuhda</td>
-              <td>gbasahjnaoiuaiuyauyhiauuhda</td>
-              <td>gbasahjnaoiuaiuyauyhiauuhda</td>
-              <td><img src={three_dots} alt="dots" /></td>
-            </tr>
-            <tr>
-              <td>gbasahjnaoiuaiuyauyhiauuhda</td>
-              <td>gbasahjnaoiuaiuyauyhiauuhda</td>
-              <td>gbasahjnaoiuaiuyauyhiauuhda</td>
-              <td>gbasahjnaoiuaiuyauyhiauuhda</td>
-              <td>gbasahjnaoiuaiuyauyhiauuhda</td>
-              <td>gbasahjnaoiuaiuyauyhiauuhda</td>
-              <td><img src={three_dots} alt="dots" /></td>
-            </tr>
-            <tr>
-              <td>gbas sdjhiu aiua iadu oiadui a a had ihud</td>
-              <td>gbas sdjhiu aiua iadu oiadui a a had ihud</td>
-              <td>gbas sdjhiu aiua iadu oiadui a a had ihud</td>
-              <td>gbas sdjhiu aiua iadu oiadui a a had ihud</td>
-              <td>gbas sdjhiu aiua iadu oiadui a a had ihud</td>
-              <td>gbas sdjhiu aiua iadu oiadui a a had ihud</td>
-              <td><img src={three_dots} alt="dots" /></td>
-            </tr>
-          </tbody>
-        </table>
         
       </div>
     </SharedLayout>
