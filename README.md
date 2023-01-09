@@ -1,23 +1,22 @@
-# Getting Started with Create React App
+# Lendsqr Frontend Assessment
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) using Typescript flag.\
+The styling is done with Sass.\
+It was built as an assessment for Lendsqr.
+
+## Getting Started
+
+To run the project, clone it by clicking on the clone button on your github dashboard. The URL is copied to your clipboard. Go to a desired folder in your local machine. Open your terminal on that folder. Paste the URL and run `git clone`. The project is automatically downloaded on your local machine. Navigate to the project folder by running on your terminal `cd lendsqr-fe-test`. Then, run `npm install` to install all the packages used for this project. After that, run `npm start`. The project should open a page automatically on your browser, otherwise, open your browser and go to [http://localhost:3000](http://localhost:3000), you should see the project live.\
+Alternatively, you can decide to download the project as a zip folder. Once downloaded, unzip the folder, and open your terminal on the folder. Run `npm install`, and finish up the process as narrated above.
 
 ## Available Scripts
-
-In the project directory, you can run:
-
 ### `npm start`
 
 Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+It will automatically open your browser on [http://localhost:3000](http://localhost:3000). But if this does not happen, open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Whenever changes are made on the code, the page will reload.\
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
 ### `npm run build`
 
@@ -29,18 +28,17 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## The Live App
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+The application consists on 3pages.\
+The first page is a Login page - Click on the `LOG IN` button to log into the users dashboard. If you wish to see the password as you type, click on `SHOW`.\
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+The second page is the users dashboard - Displays names, emails, etc of users. To see details of a particular user, click on the three dots on the right hand side of the table, you will see a dropdown. Then click the `view details`. You will be taken to a user details page. You can click on the filter by the side of the header of each column. You will see a form to input the search terms.\
+On the bottom of the table, you can select how many users you want to display per page. You can also navigate to other pages using the pagination button.\
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+The third page is the user details page - You will see other details of the user, like education, account balance, etc.\
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+This application is hosted on vercel.\
+You can view it live [here](https://ojoechemchinonso-lendsqr-fe-test.vercel.app).
