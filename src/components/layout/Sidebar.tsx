@@ -1,23 +1,17 @@
-import React from 'react'
+import { useLocation } from "react-router-dom";
+
 import { RiArrowDropDownLine } from "react-icons/ri";
-import logo from "../../assets/icons/logo.svg";
 import organization from "../../assets/icons/organization.svg";
 import dashboard from "../../assets/icons/dashboard.svg";
-import { navItems } from '../../NavItems';
+import { navItems } from "../../NavItems";
 
-type SidebarProps = {
-  closeSidebar: () => void;
-}
 
-const Sidebar: React.FC<SidebarProps> = ({ closeSidebar }) => {
+const Sidebar = () => {
+  let location = useLocation();
+  let trimLocation = location.pathname.slice(1);
+
   return (
     <>
-      <div className="logo_box">
-        <div className="close_btn" onClick={closeSidebar}>
-          &times;
-        </div>
-        <img src={logo} alt="logo" className="logo" />
-      </div>
       <div className="flex_container_1">
         <img src={organization} alt="logo" className="organization icon" />
         <p>Switch Organisation</p>
@@ -35,7 +29,7 @@ const Sidebar: React.FC<SidebarProps> = ({ closeSidebar }) => {
                 <p className="nav_heading">{navItem.heading}</p>
                 <div>
                   {navItem.items.map((item) => (
-                    <div className="nav_item" key={item.id}>
+                    <div className={`nav_item ${item.title === trimLocation ? "active_link" : null}`} key={item.id}>
                       <p>{item.icon}</p>
                       <p>{item.title}</p>
                     </div>

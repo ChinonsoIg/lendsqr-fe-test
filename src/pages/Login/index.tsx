@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 
 import "../../assets/styles/Login.scss";
 import "../../assets/styles/index.scss";
@@ -13,10 +14,6 @@ const Login = () => {
     setShow(!show)
   }
 
-  const handleLogin = (e: { preventDefault: () => void; }) => {
-    e.preventDefault();
-  }
-
   return (
     <div className="login">
       <div className="login-image-box">
@@ -28,7 +25,7 @@ const Login = () => {
           <header className="login_title">Welcome!</header>
           <p className="login_subtitle">Enter details to login</p>
         </div>
-        <form className="login_form" onSubmit={handleLogin}>
+        <form className="login_form">
           <div className="inputs_box">
             <input type="email" placeholder="Email" className="input_shared" />
             <div className="password_container">
@@ -37,7 +34,10 @@ const Login = () => {
             </div>
           <a href="#/reset_password">Forgot password?</a>
           </div>
-          <input type="submit" value="Log in" className="login_btn" />
+          <Link to="/users">
+          <button type="submit" className="login_btn">Log in</button>
+          </Link>
+          
         </form>
       </div>
     </div>

@@ -1,24 +1,19 @@
-import React from 'react'
-// import { Link, Outlet } from 'react-router-dom';
-
-
+import React from "react";
 import "../../assets/styles/Layout.scss";
-import Sidebar from './Sidebar';
-import Topbar from './Topbar';
+import Sidebar from "./Sidebar";
+import Topbar from "./Topbar";
 
+type LayoutProps = {
+  children: React.ReactNode;
+}
 
-const SharedLayout = () => {
+const SharedLayout = ({ children }: LayoutProps) => {
   const [isOpen, setIsOpen] = React.useState(false);
   const [isDropdown, setIsDropdown] = React.useState(false);
 
   const toggleSidebar = () => {
-    console.log("toggle");
-    setIsOpen(true);
+    setIsOpen(!isOpen);
   };
-
-  const closeSidebar = () => {
-    setIsOpen(false);
-  }
 
   const handleDropdown = () => {
     setIsDropdown(!isDropdown);
@@ -26,17 +21,15 @@ const SharedLayout = () => {
 
   return (
     <div className="container">
-      <div className={`sidebar ${isOpen ? "show_sidebar" : "hide_sidebar"}`}>
-        <Sidebar closeSidebar={closeSidebar} />
-      </div>
+      <Topbar toggleSidebar={toggleSidebar} handleDropdown={handleDropdown}
+        isDropdown={isDropdown} />
       <div className="layout">
-        <Topbar toggleSidebar={toggleSidebar} handleDropdown={handleDropdown} 
-        isDropdown={isDropdown}  />
+        <div className={`sidebar ${isOpen ? "show_sidebar" : "hide_sidebar"}`}>
+          <Sidebar />
+        </div>
         <main className="main">
-          Main
-          <footer>Footer</footer>
+          {children}
         </main>
-
       </div>
 
     </div>
