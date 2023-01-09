@@ -6,10 +6,12 @@ import "../../assets/styles/Users.scss"
 import { addComma, printNums } from "../../utils/functions";
 import { Loading } from "../../components/Loading";
 import { ErrorPage } from "../ErrorPage";
-import { ViewUser } from "../ViewUser";
+import { ViewUser } from "../../components/ViewUser";
 import { Pagination } from "../../components/Pagination";
 import { gridItems } from "../../utils/GridItems";
 import SharedLayout from "../../components/layout/SharedLayout";
+import filter_results_btn from "../../assets/icons/filter_results_btn.svg";
+import { FilterForm } from "../../components/FilterForm";
 
 
 const Users = () => {
@@ -26,7 +28,13 @@ const Users = () => {
 
   const [indicator, setIndicator] = React.useState(-1);
 
+  const [isFormOpen, setIsFormOpen] = React.useState(false);
+
   let allNums = printNums();
+
+  const handleIsFormFilterOpen = () => {
+    setIsFormOpen(!isFormOpen);
+  }
 
   const handleChange = (event: any) => {
     // console.log("e.ta: ", event.target.value)
@@ -65,7 +73,7 @@ const Users = () => {
     } catch (error: any) {
       console.error("err: ", error);
       setIsError(true);
-      setErrorMessage("An error occured. Check your network and try again");
+      setErrorMessage("Check your network and try again");
       setIsLoading(false);
     }
   };
@@ -111,12 +119,43 @@ const Users = () => {
               <table>
                 <thead>
                   <tr>
-                    <th>organisation</th>
-                    <th>username</th>
-                    <th>email</th>
-                    <th>phone number</th>
-                    <th>date joined</th>
-                    <th>status</th>
+                    <th>
+                      <div className="table_header_flex">
+                        <p>organisation</p>
+                        <FilterForm isFormOpen={isFormOpen} />
+                        <img src={filter_results_btn} alt="filter icon" className="form_click_handler" onClick={handleIsFormFilterOpen} />
+                      </div>
+                    </th>
+                    <th>
+                      <div className="table_header_flex">
+                        <p>username</p>
+                        <img src={filter_results_btn} alt="filter icon" onClick={handleIsFormFilterOpen} />
+                      </div>
+                    </th>
+                    <th>
+                      <div className="table_header_flex">
+                        <p>email</p>
+                        <img src={filter_results_btn} alt="filter icon" onClick={handleIsFormFilterOpen} />
+                      </div>
+                    </th>
+                    <th>
+                      <div className="table_header_flex">
+                        <p>phone number</p>
+                        <img src={filter_results_btn} alt="filter icon" onClick={handleIsFormFilterOpen} />
+                      </div>
+                    </th>
+                    <th>
+                      <div className="table_header_flex">
+                        <p>date joined</p>
+                        <img src={filter_results_btn} alt="filter icon" onClick={handleIsFormFilterOpen} />
+                      </div>
+                    </th>
+                    <th>
+                      <div className="table_header_flex">
+                        <p>status</p>
+                        <img src={filter_results_btn} alt="filter icon" onClick={handleIsFormFilterOpen} />
+                      </div>
+                    </th>
                     <th></th>
                   </tr>
                 </thead>

@@ -43,7 +43,7 @@ const SingleUser = () => {
       } catch (error: any) {
         console.error("err: ", error);
         setIsError(true);
-        setErrorMessage("An error occured. Check your network and try again");
+        setErrorMessage("Check your network and try again");
         setIsLoading(false);
       }
     };
